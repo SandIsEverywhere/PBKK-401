@@ -2,10 +2,11 @@
 
 @section('title', 'Beranda')
 @section('eyebrow', 'Selamat datang')
-@section('heading', 'Halo, saya Hasan.')
+@section('heading', 'Halo, ' . $userName . '.')
 @section('intro', 'Mahasiswa Teknik Informatika yang sedang mengeksplorasi profil, perjalanan akademik, dan ide proyek Agentic AI di semester ini.')
 
 @section('content')
+	<x-status-banner type="info">Selamat datang, {{ $userName }}.</x-status-banner>
 	<div class="grid gap-5 sm:grid-cols-2">
 		<a href="{{ route('dashboard.mahasiswa.detail', ['nrp' => '5025241114']) }}" class="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-[#0C64C2] hover:shadow-md">
 			<span class="mb-10 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-50 text-[#0C64C2]">01</span>
